@@ -55,17 +55,17 @@
                 <div class="col-lg-4 col-md-4 bhoechie-tab-container" style = "margin-left:0px">
                     <div class="col-lg-3 col-md-3 bhoechie-tab-menu">
                         <div class="list-group">
-                            <a href=" " class="list-group-item active text-center">
-                                <h4 class="glyphicon glyphicon-plane"></h4><br/>Menu1
+                            <a href=" " class="list-group-item active text-center tabbutton">
+                                    <p class="tabtext">BACKGROUND</p>
                             </a >
-                            <a href="#" class="list-group-item text-center">
-                                <h4 class="glyphicon glyphicon-road"></h4><br/>Menu2
+                            <a href="#" class="list-group-item text-center tabbutton">
+                                    <p class="tabtext">TEXT STYLE</p>
                             </a >
-                            <a href="#" class="list-group-item text-center">
-                                <h4 class="glyphicon glyphicon-home"></h4><br/>Menu3
+                            <a href="#" class="list-group-item text-center tabbutton">
+                                    <p class="tabtext">PENDANTS</p>
                             </a >
-                            <a href="#" class="list-group-item text-center">
-                                <h4 class="glyphicon glyphicon-cutlery"></h4><br/>Menu4
+                            <a href="#" class="list-group-item text-center tabbutton">
+                                    <p class="tabtext">PREVIEW</p>
                             </a >
                         </div>
                     </div>
