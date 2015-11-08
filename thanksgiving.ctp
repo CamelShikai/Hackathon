@@ -57,7 +57,7 @@
         <div class="row" style="margin:0px;">
             <!-- vertical tab -->
 
-                <div class="col-lg-4 col-md-4 bhoechie-tab-container" style = "margin-left:0px">
+                <div class="col-lg-4 col-md-4 bhoechie-tab-container tabcontent">
                     <div class="col-lg-3 col-md-3 bhoechie-tab-menu">
                         <div class="list-group">
                             <a href=" " class="list-group-item active text-center tabbutton">
@@ -74,43 +74,35 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-9 bhoechie-tab">
-                        <!-- flight section -->
-                        <div class="bhoechie-tab-content active">
-                            <center>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
-                            </center>
-                        </div>
-                        <!-- small pic -->
-                        <div class="bhoechie-tab-content ">
-                            <center id="nav-dots">
-                                <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>class="smallpic"</h2>
-                                <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu2</h2>
-                                <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu2</h2>
-                                <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu2</h2>
-                            </center>
-                        </div>
-                        <!-- hotel search -->
-                        <div class="bhoechie-tab-content">
-                            <center>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu3</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu3</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu3</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu3</h2>
-                            </center>
-                        </div>
-                        <!--bhoechoie-->
-                        <div class="bhoechie-tab-content">
-                            <center>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu4</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu4</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu4</h2>
-                                <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu4</h2>
-                            </center>
-                        </div>
+                    <div class="col-lg-9 col-md-9 bhoechie-tab thunmbnailimg">
+
+                            <div class="bhoechie-tab-content active">
+
+                                <div class="background scrollwindow">
+                                </div>
+                                </div>
+
+
+                            <div class="bhoechie-tab-content">
+                                <div class="greetingtext scrollwindow">
+
+                                </div>
+                            </div>
+
+                            <div class="bhoechie-tab-content">
+                                <center>
+                                    <img src="http://placehold.it/250x100">
+                                    <img src="http://placehold.it/250x100">
+                                    <img src="http://placehold.it/250x100">
+                                    <img src="http://placehold.it/250x100">
+                                </center>
+                            </div>
+
+                            <div class="bhoechie-tab-content">
+                                <center>
+                                    <a class="btn btn-default" id="btn1" role="button" href="#">Test BTN</a>
+                                </center>
+                            </div>
 
                     </div>
                 </div>
@@ -157,6 +149,7 @@
 </html>
 <?php echo $this->Html->script("modernizr.custom.46884")?>
 <?php echo $this->Html->script("jquery.slicebox")?>
+<?php echo $this->Html->script("html2canvas")?>
 <script type="text/javascript">
     $(function() {
 
@@ -247,6 +240,17 @@
     /*$(".smallpic").click(function(){
         console.log("smallpic");
     })*/
-    
+
+
+    //this function is for click and save image
+        $("#btn1").on("click", function(event) {
+            html2canvas(document.getElementById("mycard"), {
+                onrendered: function (canvas) {
+                    var img = canvas.toDataURL("image/jpeg", 1.0).replace("image/jpeg", "image/octet-stream");
+                    window.location.href = img;
+                }
+            });
+        });
+
 </script>
 
