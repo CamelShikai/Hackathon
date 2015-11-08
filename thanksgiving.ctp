@@ -109,9 +109,9 @@
 
             <!-- botttom-right -->
 
-                <div class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;">
+                <div id="card_pic" class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;overflow:hidden;">
                    
-                    <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;overflow:hidden;">
+                    <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;">
                         <ul id="sb-slider" class="sb-slider">
                             <li>
                             <?php echo $this->Html->image('card0.png', array('alt' => 'CakePHP'));?>
@@ -208,6 +208,22 @@
         })();
 
         Page.init();
+
+        //
+        var semaphore = "<?php echo $bless_content;?>"
+        if (semaphore == "-1") {
+            console.log("no para");
+            $("div.tabcontent").remove();
+            $("section.header").remove();
+            var styles = {
+              width : "100%",
+              height: "1137px"
+            };
+            $("#card_pic").css(styles);
+
+        } else{
+
+        };
     });
 
 
