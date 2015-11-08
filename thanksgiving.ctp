@@ -78,7 +78,7 @@
 
                             <div class="bhoechie-tab-content active">
 
-                                <div class="background scrollwindow">
+                                <div id="nav-dots" class="background scrollwindow">
                                 </div>
                                 </div>
 
@@ -126,6 +126,15 @@
                             <li>
                                 <?php echo $this->Html->image('card3.png', array('alt' => 'CakePHP'));?>
                             </li>
+                            <li>
+                                <?php echo $this->Html->image('card4.png', array('alt' => 'CakePHP'));?>
+                            </li>
+                            <li>
+                                <?php echo $this->Html->image('card5.png', array('alt' => 'CakePHP'));?>
+                            </li>
+                            <li>
+                                <?php echo $this->Html->image('card6.png', array('alt' => 'CakePHP'));?>
+                            </li>
                         </ul>
 
                         <div id="shadow" class="shadow"></div>                
@@ -155,7 +164,7 @@
 
         var Page = (function() {
             var $navDots = $('#nav-dots'),
-                $nav = $navDots.children( 'h2' ),
+                $nav = $navDots.children('img'),
                 
                 slicebox = $('#sb-slider').slicebox( {
                     onReady : function() {                              
