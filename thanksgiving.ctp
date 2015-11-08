@@ -100,12 +100,40 @@
 
                             <div class="bhoechie-tab-content">
                                 <center>
-                                    <a class="btn btn-default" id="btn1" role="button" href="#">Test BTN</a>
+                                    <div style="margin-bottom: 30px">
+                                        <form>
+                                            <fieldset class="form-group">
+                                                <label for="emailInput" class="previewfont">Send Thanksgiving Greeting to Your Friend</label>
+                                                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                                            </fieldset>
+                                            <button type="submit" class="btn btn-warning btn150">Send to Friend</button>
+                                        </form>
+                                    </div>
+
+                                    <p class="previewfont">You can also save the static image to your computer.</p>
+                                    <a class="btn btn-warning btn150" id="btn1" role="button" href="#" >Save to Computer</a>
                                 </center>
                             </div>
 
                     </div>
                 </div>
+                                <div class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;">
+                                    <div style="padding: 10px">
+                                        <div id="mycard">
+                                            <div class="ecard">
+
+                                                <div class="text">
+
+                                                    <h3>Can Can Shi Ben Dan</h3>
+                                                </div>
+                                                <img src="images/bg1.jpg" class="img-responsive" id="0" >
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
 
             <!-- botttom-right -->
 
