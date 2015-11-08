@@ -312,7 +312,7 @@
 
     //this function is for click and save image
         $("#btn1").on("click", function(event) {
-            html2canvas(document.getElementById("mycard"), {
+            html2canvas(document.getElementById("card_pic"), {
                 onrendered: function (canvas) {
                     var img = canvas.toDataURL("image/jpeg", 1.0).replace("image/jpeg", "image/octet-stream");
                     window.location.href = img;
