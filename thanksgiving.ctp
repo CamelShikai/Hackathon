@@ -60,16 +60,16 @@
                 <div class="col-lg-4 col-md-4 bhoechie-tab-container tabcontent">
                     <div class="col-lg-3 col-md-3 bhoechie-tab-menu">
                         <div class="list-group">
-                            <a href=" " class="list-group-item active text-center tabbutton">
+                            <a href=" " class="list-group-item active text-center tabbutton" id="bgimg">
                                     <p class="tabtext">BACKGROUND</p>
                             </a>
-                            <a href="#" class="list-group-item text-center tabbutton">
+                            <a href="#" class="list-group-item text-center tabbutton" id="textstyle">
                                     <p class="tabtext">TEXT STYLE</p>
                             </a>
-                            <a href="#" class="list-group-item text-center tabbutton">
+                            <a href="#" class="list-group-item text-center tabbutton" id="pendants">
                                     <p class="tabtext">PENDANTS</p>
                             </a>
-                            <a href="#" class="list-group-item text-center tabbutton">
+                            <a href="#" class="list-group-item text-center tabbutton" id="preview">
                                     <p class="tabtext">PREVIEW</p>
                             </a>
                         </div>
@@ -119,7 +119,8 @@
 
             <!-- botttom-right -->
                 <div id="card_pic" class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;overflow:hidden;">
-                    <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> hi,lilei,happy birthday 
+                    <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> hi,lilei,happy birthday
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal" id="textinput">edit<span class="glyphicon glyphicon-pencil"></span></button>
                     </div>
                     <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;z-index:-1;">
                         <ul id="sb-slider" class="sb-slider" style="z-index:-1;">
@@ -164,6 +165,34 @@
 
             </div>
         </footer>
+
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #F99259; -webkit-border-radius: 4px 4px 0 0;color: white">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Input Your Thanksgiving Greetings to Your Friend</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <input class="form-control inputtext" id="inputgreeting" type="text">
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="save">Save</button>
+                                </div>
+                            </div>
+
+
+
+                         </div>
+                    </div>
 </body>
 </html>
 <?php echo $this->Html->script("modernizr.custom.46884")?>
@@ -294,6 +323,33 @@
                 }
             });
         });
+
+
+        //this function for saving greeting text
+            /* click change text content*/
+            $("#save").on("click", function( ) {
+                var getValue = document.getElementById("inputgreeting").value;
+                var endValue=((getValue.replace(/<(.+?)>/gi,"&lt;$1&gt;")).replace(/ /gi,"&nbsp;")).replace(/\n/gi,"<br>");
+                document.getElementById("greetingshow").innerHTML=endValue;
+            });
+
+            //this function for hide/show edit button
+                    $("#preview").on("click", function() {
+                        $("#textinput").css("display", "none");
+                    });
+
+                    $("#bgimg").on("click", function() {
+                        $("#textinput").css("display", "none");
+                    });
+
+                    $("#pendants").on("click", function() {
+                        $("#textinput").css("display", "none");
+                    });
+
+                    $("#textstyle").on("click", function() {
+                        $("#textinput").css("display", "block");
+                    });
+
 
 </script>
 
