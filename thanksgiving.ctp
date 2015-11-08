@@ -324,10 +324,11 @@
         //this function for saving greeting text
             /* click change text content*/
             $("#save").on("click", function( ) {
-                var getValue = document.getElementById("greetingtext").value;
+                var getValue = $("#inputgreeting").val();
+                console.log(getValue);
                 var endValue=((getValue.replace(/<(.+?)>/gi,"&lt;$1&gt;")).replace(/ /gi,"&nbsp;")).replace(/\n/gi,"<br>");
                 console.log(endValue);
-                $("#blesscontent").html(endValue);
+                $("#greetingtext").html(endValue);
             });
 
             //this function for hide/show edit button
