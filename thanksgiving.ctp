@@ -258,6 +258,12 @@
             };
             $("#card_pic").css(styles);
 
+            //fill
+            var blessing = "<?php echo $bless_content;?>"
+            alert(blessing);
+            $("#greetingtext").html(blessing);
+
+
         } else{
 
         };
