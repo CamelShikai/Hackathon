@@ -41,7 +41,7 @@
                  style="font-size:14em;color:#ffffff">
 
                 <h3 style="padding-top:40px">
-                    Say Hi to Thanksgiving
+                    <span class="glyphicon glyphicon-heart"></span> HAPPY THANKSGIVING! <span class="glyphicon glyphicon-star"></span>
                 </h3>
             </div>
         </div>
