@@ -118,7 +118,7 @@
                     <div id="blesscontent" style= "width:500px;position:absolute; left:33%; top:50%; color:#fff; font-weight:bold; font-size:35px;"> <span id="greetingtext" data="<?php echo $bless_content;?>"><?php echo $bless_content;?></span>
                         <span><button class="btn btn-warning" data-toggle="modal" data-target="#myModal" id="textinput">edit<span class="glyphicon glyphicon-pencil"></span></button>
                     </div>
-                    <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;z-index:-1;">
+                    <div class="wrappers" style="height:509px;margin-top:-10px;">
                         <ul id="sb-slider" class="sb-slider" style="z-index:-1;">
                             <li>
                             <?php echo $this->Html->image('card0.png', array('alt' => 'CakePHP'));?>
