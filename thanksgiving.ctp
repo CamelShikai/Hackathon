@@ -77,7 +77,7 @@
                     <div class="col-lg-9 col-md-9 bhoechie-tab">
                         <!-- flight section -->
                         <div class="bhoechie-tab-content active">
-                            <center id="nav-dots">
+                            <center>
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
@@ -86,7 +86,7 @@
                         </div>
                         <!-- small pic -->
                         <div class="bhoechie-tab-content ">
-                            <center>
+                            <center id="nav-dots">
                                 <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>class="smallpic"</h2>
                                 <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu2</h2>
                                 <h2 class="smallpic" style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu2</h2>
@@ -244,9 +244,9 @@
 
     })
 //click small pic
-    $(".smallpic").click(function(){
+    /*$(".smallpic").click(function(){
         console.log("smallpic");
-    })
+    })*/
     
 </script>
 
