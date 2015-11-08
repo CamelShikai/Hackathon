@@ -53,7 +53,7 @@
     </section>
 
     <section id="mainsection" style="background-color: #F99259">
-        <div>
+        
         <div class="row" style="margin:0px;">
             <!-- vertical tab -->
 
@@ -117,29 +117,14 @@
 
                     </div>
                 </div>
-                                <div class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;">
-                                    <div style="padding: 10px">
-                                        <div id="mycard">
-                                            <div class="ecard">
-
-                                                <div class="text">
-
-                                                    <h3>Can Can Shi Ben Dan</h3>
-                                                </div>
-                                                <img src="images/bg1.jpg" class="img-responsive" id="0" >
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
+                                
+            </div>
 
             <!-- botttom-right -->
 
                 <div id="card_pic" class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;overflow:hidden;">
                     <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> hi,lilei,happy birthday </div>
-                    <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;">
+                    <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;z-index:-1;">
                         <ul id="sb-slider" class="sb-slider" style="z-index:-1;">
                             <li>
                             <?php echo $this->Html->image('card0.png', array('alt' => 'CakePHP'));?>
@@ -165,14 +150,14 @@
                             </li>
                         </ul>
 
-                        <div id="shadow" class="shadow"></div>                
+                                        
 
                     </div>
                 </div>
 
 
-        </div>
-    </div>
+        
+    
         </section>
         <footer>
             <div class="container text-center footer">
