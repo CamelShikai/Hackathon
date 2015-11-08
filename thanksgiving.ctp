@@ -34,11 +34,7 @@
 
     <!-- header -->
         <div class="row-fluid">
-
-            <span><?php echo $from_email;?></span>
-            <span>        
-                <button id="send">send</button>
-            </span>
+            
             
         <?php echo $this->Html->image('i13.png', array('alt' => 'CakePHP', 'id' => 'titleimg'));?>
             <div class="span12 text-center"
@@ -91,7 +87,7 @@
 
                             <div class="bhoechie-tab-content">
                                 <div id="dragbox" class="dragbox" draggable="true">
-                                    <?php echo $this->Html->image('00.png', array('alt' => 'CakePHP', 'id' => 'dragimg'));?>
+                                    <?php echo $this->Html->image('01.png', array('alt' => 'CakePHP', 'id' => 'dragimg'));?>
                                 </div>
 
                             </div>
@@ -104,7 +100,7 @@
                                                 <label for="emailInput" class="previewfont">Send Thanksgiving Greeting to Your Friend</label>
                                                 <input type="email" class="form-control" id="emailInput" placeholder="Email">
                                             </fieldset>
-                                            <button type="submit" class="btn btn-warning btn150">Send to Friend</button>
+                                            <button id="send" type="submit" class="btn btn-warning btn150">Send to Friend</button>
                                         </form>
                                     </div>
 
@@ -119,7 +115,7 @@
 
             <!-- botttom-right -->
                 <div id="card_pic" class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;overflow:hidden;">
-                    <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> <span id="greetingtext">hi,lilei,happy birthday</span>
+                    <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> <span id="greetingtext">Happy Thanksgiving</span>
                         <span><button class="btn btn-warning" data-toggle="modal" data-target="#myModal" id="textinput">edit<span class="glyphicon glyphicon-pencil"></span></button>
                     </div>
                     <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;z-index:-1;">
@@ -255,6 +251,7 @@
             console.log("no para");
             $("div.tabcontent").remove();
             $("section.header").remove();
+            $("#textinput").remove();
             var styles = {
               width : "100%",
               height: "1137px"
@@ -273,37 +270,39 @@
 
 
     $("#send").click(function(){
-        alert("in");
-        //return;
+        
+        var to_email = $("#emailinput").val();
+
+
         $.ajax({
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json",
             data: {
-                "key": "jrf4U4fYNFIoPQFGhgXqJg",
-                "message": {
+                    "key": "jrf4U4fYNFIoPQFGhgXqJg",
+                    "message": {
                     "from_email": "wearenotcoders@gmail.com",
                     "to": [
                       {
-                        "email": "yuhanluo.xfx@gmail.com",
+                        "email": "gejun0907@163.com",
                         "name": "RECIPIENT NAME (OPTIONAL)",
                         "type": "to"
                       },
                       {
-                        "email": "jinshiweikai@gmail.com",
+                        "email": to_email,
                         "name": "ANOTHER RECIPIENT NAME (OPTIONAL)",
                         "type": "to"
                       }
                     ],
                     "autotext": "true",
-                    "subject": "YOUR SUBJECT HERE!",
-                    "html": "YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!"
+                    "subject": "Thanksgiving Greetings",
+                    "html": "<a href=''>YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!</a>"
                     }
                 }
             }).done(function(response) {
                 console.log(response); // if you're into that sorta thing
             });
 
-    })
+    });
 //click small pic
     /*$(".smallpic").click(function(){
         console.log("smallpic");
