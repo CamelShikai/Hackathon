@@ -246,9 +246,9 @@
         Page.init();
 
         //
-        var semaphore = "<?php echo $bless_content;?>"
-        if (semaphore == "-1") {
-            console.log("no para");
+        var semaphore = "<?php echo $semaphore;?>"
+        if (semaphore == "1") {
+            console.log(semaphore);
             $("div.tabcontent").remove();
             $("section.header").remove();
             $("#textinput").remove();
