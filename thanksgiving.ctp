@@ -166,39 +166,39 @@
             </div>
         </footer>
 
-                    <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header" style="background-color: #F99259; -webkit-border-radius: 4px 4px 0 0;color: white">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Input Your Thanksgiving Greetings to Your Friend</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <input class="form-control inputtext" id="inputgreeting" type="text">
-                                        </div>
-                                    </form>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="save">Save</button>
-                                </div>
-                            </div>
-
-
-
-                         </div>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #F99259; -webkit-border-radius: 4px 4px 0 0;color: white">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Input Your Thanksgiving Greetings to Your Friend</h4>
                     </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input class="form-control inputtext" id="inputgreeting" type="text">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" id="save">Save</button>
+                    </div>
+                </div>
+
+
+
+             </div>
+        </div>
 </body>
 </html>
 <?php echo $this->Html->script("modernizr.custom.46884")?>
 <?php echo $this->Html->script("jquery.slicebox")?>
 <?php echo $this->Html->script("html2canvas")?>
-<?php echo $this->Html->script("drag");?>
+
 <script type="text/javascript">
     $(function() {
 
@@ -266,11 +266,7 @@
         };
 
 
-        //drag
-                
-        $('#dragbox').drag(function(){
-            alert("adgasdg");
-        });
+        
     });
 
 
@@ -330,7 +326,8 @@
             $("#save").on("click", function( ) {
                 var getValue = document.getElementById("inputgreeting").value;
                 var endValue=((getValue.replace(/<(.+?)>/gi,"&lt;$1&gt;")).replace(/ /gi,"&nbsp;")).replace(/\n/gi,"<br>");
-                document.getElementById("greetingshow").innerHTML=endValue;
+                console.log(endValue);
+                $("#blesscontent").html(endValue);
             });
 
             //this function for hide/show edit button
