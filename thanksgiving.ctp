@@ -17,30 +17,36 @@
     <?php echo $this->Html->script("verticaltab");?>
     <?php echo $this->Html->css("verticaltab")?>
     <?php echo $this->Html->css("bootstrap.min")?>
+    <?php echo $this->Html->css("style")?>
 </head>
 <body>
-    
-    <div>        
+
+    <div>
         <button id="send">send</button>
     </div>
 
-
+	<section class="header" style="background-color: #F99259; height: 120px;">
     <div class="container-fluid">
     <!-- header -->
         <div class="row-fluid">
-            <div class="span12"
-                 style="font-size:14em;color:#ffffff; background-color:#f99259;height:200px">
+        <?php echo $this->Html->image('i13.png', array('alt' => 'CakePHP', 'id' => 'titleimg'));?>
+            <div class="span12 text-center"
+                 style="font-size:14em;color:#ffffff">
 
-                <h3 style="margin-left:200px;padding-top:40px">
-                    <?php echo $this->Html->image('i13.png', array('alt' => 'CakePHP'));?>
+                <h3 style="padding-top:40px">
+
                     Say Hi to Thanksgiving
                 </h3>
             </div>
         </div>
+        </div>
+    </section>
 
-        <div class="row-fluid">
+    <section id="mainsection" style="background-color: #F99259">
+        <div>
+        <div class="row">
             <!-- vertical tab -->
-            <div class="span4">
+
                 <div class="col-lg-4 col-md-4 bhoechie-tab-container" style = "margin-left:0px">
                     <div class="col-lg-3 col-md-3 bhoechie-tab-menu">
                         <div class="list-group">
@@ -62,12 +68,12 @@
                         <!-- flight section -->
                         <div class="bhoechie-tab-content active">
                             <center>
-                                
+
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
                                 <h2 style="margin-top: 0;color:#55518a";font-size:14em;>Sub-Menu1</h2>
-        
+
                             </center>
                         </div>
                         <!-- train section -->
@@ -101,16 +107,29 @@
 
                     </div>
                 </div>
-            </div>
+
             <!-- botttom-right -->
-            <div class="span8">
+
                 <div class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;">
-                    Hi
+                                       <div style="padding: 10px">
+                                           <div id="mycard" style="width: 90%;height: 90%;">
+                                               HI
+                                           </div>
+                                       </div>
                 </div>
-            </div>
+
 
         </div>
     </div>
+        </section>
+        <footer>
+            <div class="container text-center footer">
+                <p>
+                    We Are Not Coders. All Rights Reserved. 2015 HACKATHON@PSU
+                </p>
+
+            </div>
+        </footer>
 </body>
 </html>
 
