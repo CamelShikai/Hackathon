@@ -20,19 +20,20 @@
 </head>
 <body>
     
-    <div>        
-        <button id="send">send</button>
-    </div>
 
 
     <div class="container-fluid">
+
     <!-- header -->
         <div class="row-fluid">
-            <div class="span12"
-                 style="font-size:14em;color:#ffffff; background-color:#f99259;height:200px">
+            <span><?php echo $from_email;?></span>
+            <span>        
+                <button id="send">send</button>
+            </span>
+            <div class="span12" style="font-size:14em;color:#ffffff; background-color:#f99259;height:200px">
 
                 <h3 style="margin-left:200px;padding-top:40px">
-                    <?php echo $this->Html->image('i13.png', array('alt' => 'CakePHP'));?>
+                    <?php echo $this->Html->image('i13.png', array('alt' => 'CakePHP',"id" => "turkey"));?>
                     Say Hi to Thanksgiving
                 </h3>
             </div>
