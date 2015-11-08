@@ -90,9 +90,10 @@
                             </div>
 
                             <div class="bhoechie-tab-content">
-                                <div class="pendants scrollwindow">
-
+                                <div id="dragbox" class="dragbox" draggable="true">
+                                    <?php echo $this->Html->image('00.png', array('alt' => 'CakePHP', 'id' => 'dragimg'));?>
                                 </div>
+
                             </div>
 
                             <div class="bhoechie-tab-content">
@@ -168,6 +169,7 @@
 <?php echo $this->Html->script("modernizr.custom.46884")?>
 <?php echo $this->Html->script("jquery.slicebox")?>
 <?php echo $this->Html->script("html2canvas")?>
+<?php echo $this->Html->script("drag");?>
 <script type="text/javascript">
     $(function() {
 
@@ -233,6 +235,13 @@
         } else{
 
         };
+
+
+        //drag
+                
+        $('#dragbox').drag(function(){
+            alert("adgasdg");
+        });
     });
 
 
