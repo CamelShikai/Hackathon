@@ -115,7 +115,7 @@
 
             <!-- botttom-right -->
                 <div id="card_pic" class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;overflow:hidden;">
-                    <div id="blesscontent" style= "width:500px;position:absolute; left:33%; top:50%; color:#fff; font-weight:bold; font-size:35px;"> <span id="greetingtext">Happy Thanksgiving</span>
+                    <div id="blesscontent" style= "width:500px;position:absolute; left:33%; top:50%; color:#fff; font-weight:bold; font-size:35px;"> <span id="greetingtext" data="<?php echo $bless_content;?>"><?php echo $bless_content;?></span>
                         <span><button class="btn btn-warning" data-toggle="modal" data-target="#myModal" id="textinput">edit<span class="glyphicon glyphicon-pencil"></span></button>
                     </div>
                     <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;z-index:-1;">
@@ -255,13 +255,13 @@
             var styles = {
               width : "100%",
               height: "1137px"
-            };
+                };
             $("#card_pic").css(styles);            
-            var bless_content = "<?php echo $bless_content;?>";
-            console.log(bless_content);
-            $("#greetingtext").html(bless_content);
+            
+            
+            
 
-        } else{
+        }else{
             console.log("no");
         };
 
