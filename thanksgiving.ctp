@@ -118,12 +118,13 @@
                     </div>
                 </div>
                                 
-            </div>
+            
 
             <!-- botttom-right -->
 
                 <div id="card_pic" class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;overflow:hidden;">
-                    <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> hi,lilei,happy birthday </div>
+                    <div id="blesscontent" style= "width:100px;position:absolute; left:40%; top:50%; color:#fff; font-weight:bold; font-size:45px;"> hi,lilei,happy birthday 
+                    </div>
                     <div class="wrappers" style="z-index: -1;height:509px;margin-top:-10px;z-index:-1;">
                         <ul id="sb-slider" class="sb-slider" style="z-index:-1;">
                             <li>
@@ -155,7 +156,7 @@
                     </div>
                 </div>
 
-
+            </div>
         
     
         </section>
